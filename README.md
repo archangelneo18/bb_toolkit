@@ -16,12 +16,41 @@ All designed to keep your recon sharp and your flow smooth.
 
 ---
 
-## 📦 What Does It Install?
 
-- Tools via **Homebrew** (like `ffuf`, `nuclei`, `httpx`, `subfinder`, etc.)
-- GitHub-based tools (like `Arjun`, `kxss`, `JSFScan.sh`, etc.)
-- Wordlists from **SecLists** (assumed in `~/BB/tools/SecLists`)
-- Auto-alias support via `.zshrc`
+## 🧰 Tools Included
+
+### 🔍 Recon & Subdomain Discovery
+- `amass`
+- `subfinder`
+- `assetfinder` *(requires manual install)*
+- `httpx`
+- `waybackurls` *(consider replacing with `waybackpy`)*
+
+### 🕷️ Crawling & URL Gathering
+- `hakrawler`
+- `ffuf`
+- `gau`
+- `arjun`
+- `xnLinkFinder`
+- `urlhunter`
+
+### 🚨 Vulnerability Scanners
+- `nuclei` (with community templates)
+- `dalfox`
+- `kiterunner`
+
+### 🧠 Pattern Matching & Payloads
+- `gf` (Good Finds)
+- `qsreplace` *(may require manual install)*
+
+### ⚙️ Miscellaneous Tools
+- `xray`
+- `whatweb` *(Ruby@2.3 dependency – manual workaround needed)*
+- `dirsearch`
+- `unfurl`
+- `waymore`
+- `CRLFsuite`
+- `bypass-403`
 
 > ⚠️ Some tools may need extra setup or Python deps. We use `--break-system-packages` for pip3 to help with Homebrew Python.
 
