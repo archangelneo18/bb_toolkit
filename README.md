@@ -1,48 +1,122 @@
-# 🛠️ bb_toolkit
+# bb\_toolkit
 
-Welcome to **bb_toolkit** — your all-in-one, bug bounty power-up script for recon, automation, and chaos (the good kind 😎). Whether you’re new to bug bounty or a seasoned hunter building your ultimate recon machine, this toolkit helps you install, organize, and update all the tools you need, painlessly.
+> One toolkit to rule them all. Automated installation, updating, and recon for your bug bounty hustle. Built for macOS, built for bounty hunters, built for **you**.
 
-> “Why do things manually when you can automate them like a legend?”
+## 🤘 What Is This?
 
----
+`bb_toolkit.py` is your personal bug bounty Swiss Army knife. It's a Python-powered automation script that:
 
-## 🚀 What is `bb_toolkit`?
+- Installs and updates dozens of bug bounty tools
+- Clones or pulls repos from GitHub if brew can't handle it
+- Sets up easy-to-use aliases so you can run stuff from anywhere
+- Handles wordlists and tool separation like a champ (Homebrew vs GitHub)
+- Sends updates to your Discord channel (because why not?)
 
-`bb_toolkit.py` is a **massive Python script** that installs, manages, and updates your bug bounty tooling stack. It combines tools from **Homebrew**, **Go**, **GitHub**, and **pip** to build a reliable recon environment for macOS (optimized for M1/M2/M3 Macs using Homebrew).
-
-It’s designed to be:
-
-- **Easy to use** (run it, grab coffee ☕)
-- **Fully automated** (less typing, more hacking)
-- **Discord-friendly** (optional status reports via webhook)
-- **Expandable** (built for the long recon grind)
+All designed to keep your recon sharp and your flow smooth.
 
 ---
 
-## 🧰 What It Does
+## 📦 What Does It Install?
 
-- Installs tools from:
-  - 🧪 `brew` (like `httpx`, `ffuf`, `nuclei`, `amass`, `gf`)
-  - 🦫 `go install` (for those sweet CLI tools)
-  - 🧬 `pip3` with `--break-system-packages` (for macOS compatibility)
-  - 🧪 `git clone` for tools that don’t come in a box
+- Tools via **Homebrew** (like `ffuf`, `nuclei`, `httpx`, `subfinder`, etc.)
+- GitHub-based tools (like `Arjun`, `kxss`, `JSFScan.sh`, etc.)
+- Wordlists from **SecLists** (assumed in `~/BB/tools/SecLists`)
+- Auto-alias support via `.zshrc`
 
-- Creates helpful **aliases** for your `.zshrc` so you can run scripts from anywhere
-- Detects and skips tools you already have (unless you’re updating)
-- Keeps your setup tidy and contained inside `~/BB/tools`
-- Provides **update mode** to refresh everything in one go (`python3 bb_toolkit.py update`)
-- Built with ❤️ for bug bounty hunters
+> ⚠️ Some tools may need extra setup or Python deps. We use `--break-system-packages` for pip3 to help with Homebrew Python.
 
 ---
 
-## 🗃️ Project Structure
+## 📁 File Structure (Recommended)
 
 ```bash
-BB/
-├── tools/                  # Where all tools and SecLists live
-│   ├── scripts/            # Where bb_toolkit.py lives
-│   ├── git-clones/         # Cloned GitHub repos
-│   └── SecLists/           # Wordlists and payloads (non-Homebrew)
-├── H1/                     # Folder for HackerOne programs
-├── Bugcrowd/               # Folder for Bugcrowd programs
-└── README.md
+~/BB/               # Your main Bug Bounty directory
+├── tools/          # Tools that can't be installed via Homebrew
+│   └── scripts/    # bb_toolkit.py lives here
+│   └── SecLists/   # Wordlists live here
+├── H1/             # HackerOne targets
+├── Bugcrowd/       # Bugcrowd targets
+└── ReconResults/   # Output results go here (automatically generated)
+```
+
+---
+
+## 🚀 Usage
+
+```bash
+python3 bb_toolkit.py [install|update]
+```
+
+### Example:
+
+```bash
+python3 bb_toolkit.py install
+```
+
+Installs all the tools in the script.
+
+```bash
+python3 bb_toolkit.py update
+```
+
+Updates everything you've already installed.
+
+### Want global access?
+
+Add this to your `.zshrc`:
+
+```bash
+alias bbtool='python3 ~/BB/tools/scripts/bb_toolkit.py'
+```
+
+Then just run:
+
+```bash
+bbtool install
+```
+
+From anywhere 💥
+
+---
+
+## 🔔 Discord Notifications
+
+The toolkit sends messages to your Discord via webhook:
+
+- Status updates while installing
+- Errors if something goes wrong
+- Success messages when things are done
+
+Set your webhook in the script like so:
+
+```python
+DISCORD_WEBHOOK = "https://discord.com/api/webhooks/...."
+```
+
+---
+
+## 🛡️ License
+
+MIT for the `bb_toolkit.py` script itself.
+
+Third-party tools installed by this script retain **their own licenses**, which may include MIT, Apache 2.0, GPL, or others. Please check each tool's repo individually for specifics.
+
+---
+
+## ❤️ Credits
+
+Massive shoutout to:
+
+- [ProjectDiscovery](https://github.com/projectdiscovery)
+- [TomNomNom](https://github.com/tomnomnom)
+- [vavkamil](https://github.com/vavkamil/awesome-bugbounty-tools)
+- You, the hacker, for pushing boundaries
+
+---
+
+## 💬 Final Word
+
+Bug bounty can be overwhelming. Tooling shouldn't be. Let `bb_toolkit` be your assistant while you focus on hunting 🔍
+
+Now get out there and hack something. 🐞💰
+
