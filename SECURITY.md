@@ -34,7 +34,6 @@ We support integration with CodeQL or other static analysis tools. You can:
 If you discover a security vulnerability within this repo:
 
 - Please **do not** open an issue.
-- Email us at: `security@yourdomain.com`
 - Or open a confidential discussion (if enabled).
 
 ---
