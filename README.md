@@ -133,13 +133,15 @@ Third-party tools installed by this script retain **their own licenses**, which 
 ---
 
 ## ❤️ Credits
+- **Author**: [@archangelneo18](https://github.com/archangelneo18) — U.S. Army Veteran and bug bounty hunter
 
 Massive shoutout to:
 
-- [ProjectDiscovery](https://github.com/projectdiscovery)
-- [TomNomNom](https://github.com/tomnomnom)
-- [vavkamil](https://github.com/vavkamil/awesome-bugbounty-tools)
-- You, the hacker, for pushing boundaries
+- - [ProjectDiscovery](https://github.com/projectdiscovery)
+- - [TomNomNom](https://github.com/tomnomnom)
+- - [vavkamil](https://github.com/vavkamil/awesome-bugbounty-tools)
+- - You, the hacker, for pushing boundaries
+- **Built for**: The bug bounty community to streamline setup and recon
 
 ---
 ## 👨‍💻 Contributors
