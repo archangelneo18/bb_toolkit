@@ -142,6 +142,15 @@ Massive shoutout to:
 - You, the hacker, for pushing boundaries
 
 ---
+## 👨‍💻 Contributors
+
+Security is a shared responsibility. Please:
+
+- Keep your GitHub account secure
+- Enable 2FA on your GitHub account
+- Don’t push secrets or tokens — use `.env` and `.gitignore`
+
+---
 
 ## 💬 Final Word
 
