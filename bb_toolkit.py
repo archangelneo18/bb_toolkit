@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-
+#  ____   _     _   _           _ _    _ _ _       
+# | __ ) | |__ | |_| |__   ___ | | | _(_) | |_ ___ 
+# |  _ \ | '_ \| __| '_ \ / _ \| | |/ / | | __/ _ \
+# | |_) || | | | |_| | | | (_) | |   <| | | ||  __/
+# |____(_)_| |_|\__|_| |_|\___/|_|_|\_\_|_|\__\___|
+#   Bug Bounty Toolkit Installer & Updater
+#   https://github.com/archangelneo18/bb_toolkit
 import os
 import subprocess
 from pathlib import Path
